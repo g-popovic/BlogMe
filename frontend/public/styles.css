@@ -1,0 +1,33 @@
+body,
+#root {
+	padding: 0;
+	margin: 0;
+}
+
+.hide-mobile {
+	display: none;
+}
+
+/*############################# NAV BAR #############################*/
+
+nav {
+	padding: 0.9em;
+	text-align: center;
+	background-color: white;
+}
+
+.logo {
+	width: 7em;
+	margin: auto;
+}
+
+.burger {
+	width: 1.4em;
+	position: absolute;
+	top: 1.4em;
+	right: 1.3em;
+}
+
+.landing-page-background {
+	background-image: url("../src/images/background-nature.jpg") no-repeat;
+}

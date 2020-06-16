@@ -9,7 +9,8 @@ const userSchema = new mongoose.Schema({
 		minlength: 3
 	},
 	password: { type: String, required: true },
-	favoritePostsIDs: [String]
+	favoritePostsIDs: [String],
+	likedPostsIDs: [String]
 });
 
 const User = mongoose.model("User", userSchema);

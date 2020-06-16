@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>BlogMe</title>
+		<link rel="stylesheet" href="../../public/styles.css" />
+	</head>
+	<body>
+		<div class="root">
+			<nav>
+				<img class="logo" src="../images/Logo@3x.png" alt="logo" />
+				<img
+					class="burger hide-desktop"
+					src="../images/Burger.svg"
+					alt="navigation"
+				/>
+				<ul class="nav-items hide-mobile">
+					<li class="nav-item"><a href="#">Explore</a></li>
+					<li class="nav-item"><a href="#">Favorites</a></li>
+					<li class="nav-item hide-auth"><a href="#">Login</a></li>
+					<li class="nav-item hide-auth"><a href="#">Register</a></li>
+					<li class="nav-item hide-unauth"><a href="#">New Post</a></li>
+				</ul>
+			</nav>
+
+			<h2 class="posts-page-label">Explore</h2>
+
+			<div class="posts-main">
+				<ul class="posts-container">
+					<li class="post">
+						<h3 class="post-title">This is the title of my very first blog</h3>
+						<p class="post-author">djoka123</p>
+						<div class="post-interactions">
+							<button class="likes">
+								<img src="../images/favorite-24px.svg" alt="like-icon" />
+								<p class="interaction-label-mobile">14</p>
+								<p class="interaction-label-desktop">14 Likes</p>
+							</button>
+							<button class="comments">
+								<img src="../images/textsms-24px.svg" alt="comment-icon" />
+								<p class="interaction-label-mobile">14</p>
+								<p class="interaction-label-desktop">14 Likes</p>
+							</button>
+							<button class="favorites">
+								<img src="../images/star-24px (1).svg" alt="favorite-icon" />
+								<p class="interaction-label-mobile">14</p>
+								<p class="interaction-label-desktop">14 Likes</p>
+							</button>
+
+							<p class="post-date">14 minutes ago</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>

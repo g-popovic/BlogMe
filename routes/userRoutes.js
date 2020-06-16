@@ -15,7 +15,13 @@ router.route("/register").post((req, res) => {
 
 			newUser
 				.save()
-				.then(() => res.send("User created successfully."))
+				.then(() => {
+					req.session.authenticated = true;
+					req.session.userID = newUser._id;
+					req.session.username = newUser.username;
+
+					res.status(200).send("Account created. You are now logged in!");
+				})
 				.catch(err => res.send(err));
 		}
 	});
@@ -26,6 +32,9 @@ router.route("/login").post((req, res) => {
 		if (user) {
 			bcrypt.compare(req.body.password, user.password, (err, result) => {
 				if (result) {
+					req.session.authenticated = true;
+					req.session.userID = user._id;
+					req.session.username = user.username;
 					res.status(200).send("You are now logged in!");
 				} else {
 					res.status(401).send("Incorrect password.");
@@ -38,7 +47,10 @@ router.route("/login").post((req, res) => {
 });
 
 router.route("/logout").post((req, res) => {
-	res.send("Logging out...");
+	req.session.authenticated = false;
+	req.session.userID = undefined;
+	req.session.username = undefined;
+	res.send("Goodbye!");
 });
 
 module.exports = router;

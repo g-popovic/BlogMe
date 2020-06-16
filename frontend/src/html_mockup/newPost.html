@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../public/styles.css" />
+		<title>BlogMe</title>
+	</head>
+	<body>
+		<div class="root">
+			<nav>
+				<img class="logo" src="../images/Logo@3x.png" alt="logo" />
+				<img
+					class="burger hide-desktop"
+					src="../images/Burger.svg"
+					alt="navigation"
+				/>
+				<ul class="nav-items hide-mobile">
+					<li class="nav-item"><a href="#">Explore</a></li>
+					<li class="nav-item"><a href="#">Favorites</a></li>
+					<li class="nav-item hide-auth"><a href="#">Login</a></li>
+					<li class="nav-item hide-auth"><a href="#">Register</a></li>
+					<li class="nav-item hide-unauth"><a href="#">New Post</a></li>
+				</ul>
+			</nav>
+
+			<div class="create-post-container">
+				<h1>Create New Post</h1>
+
+				<form action="http://localhost:5000/posts/new-post">
+					<label for="post-title">Title:</label>
+					<input
+						type="text"
+						autocomplete="false"
+						name="post-title"
+						placeholder="Post title"
+					/>
+					<label for="post-content">Content:</label>
+					<input
+						type="text"
+						autocomplete="false"
+						name="post-content"
+						placeholder="What do you want to write about?"
+					/>
+
+					<div>
+						<button class="new-post-button" type="submit">POST</button>
+						<button class="discard-post-button">DISCARD</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

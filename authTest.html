@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Authentication Test</title>
+	</head>
+	<body>
+		<h1>Please Sign-In</h1>
+		<form action="http://localhost:5000/user/login" method="post">
+			<input type="text" name="username" />
+			<input type="password" name="password" />
+			<button type="submit">Submit</button>
+		</form>
+
+		<form
+			action="http://localhost:5000/posts/favorite/5ee73bfb328e872104bd5112"
+			method="post"
+		>
+			<button type="submit">Favorite</button>
+		</form>
+		<form
+			action="http://localhost:5000/posts/like/5ee73bfb328e872104bd5112"
+			method="post"
+		>
+			<button type="submit">Like</button>
+		</form>
+	</body>
+</html>

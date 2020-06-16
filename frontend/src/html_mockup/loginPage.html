@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../public/styles.css" />
+		<title>BlogMe</title>
+	</head>
+	<body>
+		<div class="root">
+			<nav>
+				<img class="logo" src="../images/Logo@3x.png" alt="logo" />
+				<img
+					class="burger hide-desktop"
+					src="../images/Burger.svg"
+					alt="navigation"
+				/>
+				<ul class="nav-items hide-mobile">
+					<li class="nav-item"><a href="#">Explore</a></li>
+					<li class="nav-item"><a href="#">Favorites</a></li>
+					<li class="nav-item hide-auth"><a href="#">Login</a></li>
+					<li class="nav-item hide-auth"><a href="#">Register</a></li>
+					<li class="nav-item hide-unauth"><a href="#">New Post</a></li>
+				</ul>
+			</nav>
+
+			<div class="login-container">
+				<h1>SIGN IN TO BLOGME</h1>
+
+				<form>
+					<div>
+						<img
+							class="login-icon-label"
+							src="../images/Icon@3x.png"
+							alt="input icon"
+						/>
+						<input
+							class="username-input"
+							autocomplete="off"
+							type="text"
+							placeholder="Username"
+						/>
+					</div>
+					<div>
+						<img
+							class="login-icon-label"
+							src="../images/vpn_key-24px.svg"
+							alt="input icon"
+						/>
+						<input
+							class="username-input"
+							autocomplete="off"
+							type="text"
+							placeholder="Username"
+						/>
+					</div>
+
+					<button class="login-button" type="submit">SIGN IN</button>
+
+					<div class="login-second-option">
+						<p>Don't have an account?</p>
+						<a href="#">Create one now!</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
