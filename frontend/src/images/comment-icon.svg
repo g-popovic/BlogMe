@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #1fab89;
+      }
+    </style>
+  </defs>
+  <path id="comment-icon" class="cls-1" d="M22,4a2.006,2.006,0,0,0-2-2H4A2.006,2.006,0,0,0,2,4V16a2.006,2.006,0,0,0,2,2H18l4,4Z" transform="translate(-2 -2)"/>
+</svg>
