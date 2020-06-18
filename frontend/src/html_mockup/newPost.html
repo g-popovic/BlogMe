@@ -22,6 +22,8 @@
 					<li class="nav-item hide-auth"><a href="#">Register</a></li>
 					<li class="nav-item hide-unauth"><a href="#">New Post</a></li>
 				</ul>
+
+				<div class="green-strip"></div>
 			</nav>
 
 			<div class="create-post-container">
@@ -30,22 +32,28 @@
 				<form action="http://localhost:5000/posts/new-post">
 					<label for="post-title">Title:</label>
 					<input
+						class="new-post-title"
 						type="text"
 						autocomplete="false"
 						name="post-title"
 						placeholder="Post title"
 					/>
 					<label for="post-content">Content:</label>
-					<input
+					<textarea
+						class="new-post-content"
 						type="text"
 						autocomplete="false"
 						name="post-content"
 						placeholder="What do you want to write about?"
-					/>
+					></textarea>
 
-					<div>
-						<button class="new-post-button" type="submit">POST</button>
-						<button class="discard-post-button">DISCARD</button>
+					<div class="new-post-buttons">
+						<button class="new-post-button btn-primary" type="submit">
+							POST
+						</button>
+						<button class="discard-post-button btn-secondary-black">
+							DISCARD
+						</button>
 					</div>
 				</form>
 			</div>

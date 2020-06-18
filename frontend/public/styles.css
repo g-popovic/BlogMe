@@ -11,6 +11,10 @@ html {
 	margin: 0;
 }
 
+*:focus {
+	outline: 1px solid #1fab89;
+}
+
 body {
 	padding: 0;
 	margin: 0;
@@ -28,7 +32,37 @@ button:focus {
 }
 
 .hide-mobile {
-	display: none !important;
+	display: none;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-secondary-black {
+	color: white;
+	text-decoration: none;
+	font-size: 1.2em;
+	font-weight: lighter;
+	display: block;
+	padding: 0.9rem;
+	border-radius: 2rem;
+	width: 52%;
+	margin: 1.5rem auto;
+}
+
+.btn-primary {
+	border: none;
+	background-color: #1fab89;
+}
+
+.btn-secondary {
+	background: none;
+	border: solid 2px white;
+}
+
+.btn-secondary-black {
+	background: none;
+	color: #2a2a2a;
+	border: solid 2px #2a2a2a;
 }
 
 /*############################# NAV BAR #############################*/
@@ -37,7 +71,7 @@ nav {
 	padding: 0.9em 0;
 	text-align: center;
 	background-color: white;
-	box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.12);
+	box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
@@ -152,7 +186,7 @@ nav {
 	text-align: left;
 	left: 0;
 	right: 0;
-	box-shadow: 0px 0 30px 0px rgba(0, 0, 0, 0.12);
+	box-shadow: 0px 0 30px 0px rgba(0, 0, 0, 0.08);
 }
 
 .posts-container {
@@ -160,6 +194,11 @@ nav {
 	list-style-type: none;
 	padding: 0 !important;
 	margin: 0;
+}
+
+.posts-container li:last-child {
+	margin-bottom: 0;
+	border-bottom: 1px solid white;
 }
 
 .post-title {
@@ -219,4 +258,355 @@ nav {
 	color: #8a8a8a;
 	margin: -0.2rem 0 2rem;
 	font-weight: 600;
+}
+
+/*############################# OPENED POST PAGE #############################*/
+
+.post-main {
+	background-color: white;
+	margin-top: 4rem;
+	padding-bottom: 3.5rem;
+	text-align: left;
+}
+
+.post-sub-main {
+	padding: 2rem 2rem 0;
+}
+
+.open-post-title {
+	margin: 0;
+}
+
+.open-post-title {
+	font-weight: 600;
+}
+
+.open-post-author {
+	font-size: 0.9em;
+	color: #8a8a8a;
+	font-weight: 600;
+	margin: 0.3rem 0 2.2rem;
+}
+
+.open-post-content {
+	line-height: 1.85;
+	font-size: 1.1em;
+}
+
+.open-post-seperation {
+	text-align: center;
+	margin: -2.2rem auto 1.7rem;
+	font-size: 2.8rem;
+	color: #acacac;
+	letter-spacing: 0.4rem;
+}
+
+.comment-label {
+	font-size: 1.4em;
+	font-weight: 500;
+}
+
+.post-comment-form input {
+	border: none;
+	background-color: white;
+	font-size: 1.2em;
+	margin: 1rem 0 1.4rem;
+	padding: 0.6rem 1.4rem;
+	font-weight: 500;
+	border: 1px solid #d8d8d8;
+	flex-basis: 100%;
+}
+
+.comment-input-container {
+	display: flex;
+}
+
+.post-comment-form input::placeholder {
+	color: #9c9c9c;
+	font-weight: 500;
+}
+
+.post-comment-form input:focus {
+	outline: 1px #1fab89 solid;
+}
+
+.comment-btn-container {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto 1.8rem;
+}
+
+.post-comment,
+.cancel-comment {
+	font-size: 1em;
+	margin: 0;
+	padding: 0.5rem 1.4rem;
+	letter-spacing: 1px;
+	width: auto;
+}
+
+.cancel-comment {
+	border-width: 1px;
+}
+
+.comments-container {
+	margin: 0.6rem 0 0;
+	list-style-type: none;
+	padding: 0;
+}
+
+.comments-container li {
+	padding: 0.5rem 2rem;
+	border-bottom: 1px solid #d6d6d6;
+}
+
+.comments-container li:last-child {
+	border-bottom: none;
+}
+
+.comment-author {
+	font-size: 1em;
+	color: #8a8a8a;
+	font-weight: 600;
+	margin-bottom: 0.7rem;
+}
+
+.comment-content {
+	margin-top: 0;
+	font-size: 1.1em;
+	color: black;
+}
+
+/*############################# LOGIN PAGE #############################*/
+
+.login-container {
+	background-color: white;
+	min-height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: -1;
+}
+
+.login-container h1 {
+	margin-top: 9rem;
+	padding: 0 2rem;
+	font-weight: 900;
+	font-size: 2.2em;
+	line-height: 1.5;
+	letter-spacing: 2px;
+	color: #2a2a2a;
+}
+
+.login-forms {
+	width: 72%;
+	margin: 4rem auto;
+}
+
+.login-input-container {
+	margin: 1.3rem auto;
+	border-bottom: 3px solid #1fab89;
+	display: flex;
+	align-items: center;
+}
+
+.login-icon-username {
+	width: 1.4em;
+}
+
+.login-icon-password {
+	width: 1.6em;
+}
+
+.login-input {
+	border: none;
+	padding: 1rem;
+	font-size: 1.1em;
+	color: black;
+	width: 80%;
+}
+
+.login-input:focus {
+	outline: none;
+}
+
+.login-input::placeholder {
+	color: #9c9c9c;
+	font-weight: 500;
+}
+
+.login-button {
+	margin: 4.5rem auto;
+	font-weight: 500;
+	letter-spacing: 1px;
+	padding: 0.9rem 3rem;
+	width: auto;
+}
+
+.login-second-option {
+	margin-bottom: 3rem;
+}
+
+.login-second-option * {
+	color: black;
+	font-size: 1em;
+}
+
+.login-second-option p {
+	margin-bottom: 0.3rem;
+}
+
+/*############################# CREATE POST PAGE #############################*/
+
+.create-post-container {
+	background-color: white;
+	min-height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: -1;
+}
+
+.create-post-container * {
+	display: block;
+	text-align: left;
+}
+
+.create-post-container h1 {
+	margin: 7.2rem auto 3rem;
+	font-weight: 600;
+	font-size: 1.8em;
+	text-align: center;
+	color: #2a2a2a;
+}
+
+.create-post-container form {
+	padding: 0 2.2rem 0;
+	display: flex;
+	align-items: stretch;
+	flex-direction: column;
+}
+
+.create-post-container label {
+	font-size: 1.45em;
+	font-weight: 500;
+	color: #2a2a2a;
+}
+
+.new-post-title,
+.new-post-content {
+	margin: 0.8rem 0 1.7rem;
+	font-size: 1.22em;
+	padding: 0.8rem 1.3rem;
+	border: 1px #c7c7c7 solid;
+	border-radius: 0.4rem;
+	resize: none;
+}
+
+.new-post-title::placeholder,
+.new-post-content::placeholder {
+	color: #a1a1a1;
+}
+
+.new-post-content {
+	min-height: 7rem;
+	font-family: "Montserrat", sans-serif;
+}
+
+.new-post-buttons {
+	margin: 0rem 0 2rem;
+}
+
+.new-post-buttons button {
+	text-align: center;
+	width: 70%;
+}
+
+.discard-post-button {
+	border-width: 1px;
+}
+
+/*-------------------------------------------------------------------*/
+/*############################# DESKTOP #############################*/
+/*-------------------------------------------------------------------*/
+
+@media only screen and (min-width: 600px) {
+	.hide-desktop {
+		display: none;
+	}
+
+	.hide-mobile {
+		display: block;
+	}
+
+	/*############################# NAVBAR #############################*/
+
+	nav {
+		padding: 0 3rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.logo {
+		margin: 0;
+	}
+
+	.nav-items {
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+		display: flex;
+	}
+
+	.nav-item {
+		z-index: 2;
+		margin: 0 0.6rem;
+	}
+
+	.nav-item button {
+		background-color: white;
+		border: none;
+		margin: 0;
+		text-decoration: none;
+		cursor: pointer;
+		color: #2a2a2a;
+		padding: 1.5rem 1.4rem;
+		font-size: 1.1em;
+	}
+
+	.nav-item button:focus {
+		outline: none;
+	}
+
+	.nav-item button:hover {
+		background-color: #f3f3f3;
+	}
+
+	.nav-item button:active {
+		background-color: #ebebeb;
+	}
+
+	/* .nav-items li:last-child {
+		margin: auto 1.4rem;
+	}
+
+	.nav-items li:last-child button {
+		border: 1px solid #2a2a2a;
+		border-radius: 3rem;
+		padding: 0.3rem 1rem;
+		cursor: pointer;
+	}
+
+	.nav-items li:last-child button:hover {
+		box-shadow: 0 0 2rem 0.3rem rgba(0, 0, 0, 0.08);
+	}
+
+	.nav-items li:last-child button:active {
+		background-color: #ebebeb;
+	} */
 }

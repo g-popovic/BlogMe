@@ -22,40 +22,57 @@
 					<li class="nav-item hide-auth"><a href="#">Register</a></li>
 					<li class="nav-item hide-unauth"><a href="#">New Post</a></li>
 				</ul>
+
+				<div class="green-strip"></div>
 			</nav>
 
 			<div class="login-container">
 				<h1>SIGN IN TO BLOGME</h1>
 
-				<form>
-					<div>
+				<form class="login-forms">
+					<div class="login-input-container">
 						<img
-							class="login-icon-label"
+							class="login-icon-label login-icon-username"
 							src="../images/Icon@3x.png"
 							alt="input icon"
 						/>
 						<input
-							class="username-input"
+							class="login-input"
 							autocomplete="off"
 							type="text"
-							placeholder="Username"
+                            placeholder="Username"
+                            name="username"
 						/>
 					</div>
-					<div>
+					<div class="login-input-container">
 						<img
-							class="login-icon-label"
-							src="../images/vpn_key-24px.svg"
+							class="login-icon-label login-icon-password"
+							src="../images/key-icon.svg"
 							alt="input icon"
 						/>
 						<input
-							class="username-input"
+							class="login-input"
 							autocomplete="off"
 							type="text"
-							placeholder="Username"
+                            placeholder="Password"
+                            name="login-icon-password"
+						/>
+					</div>
+					<div class="login-input-container">
+						<img
+							class="login-icon-label login-icon-password"
+							src="../images/key-icon.svg"
+							alt="input icon"
+						/>
+						<input
+							class="login-input"
+							autocomplete="off"
+							type="text"
+							placeholder="Confirm Password"
 						/>
 					</div>
 
-					<button class="login-button" type="submit">SIGN IN</button>
+					<button class="login-button btn-primary" type="submit">SIGN IN</button>
 
 					<div class="login-second-option">
 						<p>Don't have an account?</p>

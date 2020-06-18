@@ -22,62 +22,98 @@
 					<li class="nav-item hide-auth"><a href="#">Register</a></li>
 					<li class="nav-item hide-unauth"><a href="#">New Post</a></li>
 				</ul>
+
+				<div class="green-strip"></div>
 			</nav>
 
 			<div class="post-main">
-				<h2 class="open-post-title">
-					This is the title of my very first blog
-				</h2>
-				<p class="open-post-author">djoka123</p>
+				<div class="post-sub-main">
+					<h2 class="open-post-title">
+						This is the title of my very first blog
+					</h2>
+					<p class="open-post-author">djoka123</p>
 
-				<p class="open-post-content">
-					Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-					eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-					voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-					clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-					amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-					nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-					diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-					Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
-					sit amet
-				</p>
+					<p class="open-post-content">
+						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+						nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+						sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+						rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
+						ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+						sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+						dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+						et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+						takimata sanctus est Lorem
+					</p>
 
-				<div class="open-post-interactions">
-					<button class="likes">
-						<img src="../images/favorite-24px.svg" alt="like-icon" />
-						<p class="interaction-label-mobile">14</p>
-						<p class="interaction-label-desktop">14 Likes</p>
-					</button>
-					<button class="comments">
-						<img src="../images/textsms-24px.svg" alt="comment-icon" />
-						<p class="interaction-label-mobile">14</p>
-						<p class="interaction-label-desktop">14 Likes</p>
-					</button>
-					<button class="favorites">
-						<img src="../images/star-24px (1).svg" alt="favorite-icon" />
-						<p class="interaction-label-mobile">14</p>
-						<p class="interaction-label-desktop">14 Likes</p>
-					</button>
-
-					<p class="open-post-date">14 minutes ago</p>
-				</div>
-
-				<div class="open-post-seperation"></div>
-
-				<form action="http://localhost:5000/posts/new-comment" method="post">
-					<label class="comment-label">Add comment:</label>
-					<input type="text" name="comment-input" placeholder="Your comment..." />
-					<div class="show-if-typing-comment">
-						<button class="post-comment-button">POST</button>
-						<button class="cancel-comment-button">CANCEL</button>
+					<div class="post-interactions">
+						<button class="likes">
+							<img src="../images/like-icon.svg" alt="like icon" />
+							<p class="interaction-label hide-desktop">392</p>
+							<p class="interaction-label hide-mobile">14 Likes</p>
+						</button>
+						<button class="comments">
+							<img src="../images/comment-border.svg" alt="comment icon" />
+							<p class="interaction-label hide-desktop">2</p>
+							<p class="interaction-label hide-mobile">14 Likes</p>
+						</button>
+						<button class="favorites">
+							<img src="../images/favorite-border.svg" alt="favorite icon" />
+							<p class="interaction-label hide-desktop">2.6k</p>
+							<p class="interaction-label hide-mobile">14 Likes</p>
+						</button>
 					</div>
-				</form>
+					<p class="post-date">2 hours ago</p>
+
+					<div class="open-post-seperation">....</div>
+
+					<form
+						class="post-comment-form"
+						action="http://localhost:5000/posts/new-comment"
+						method="post"
+					>
+						<label class="comment-label">Add comment:</label>
+						<div class="comment-input-container">
+							<input
+								autocomplete="false"
+								type="text"
+								name="comment-input"
+								placeholder="Your comment..."
+							/>
+						</div>
+						<div class="comment-btn-container show-if-typing-comment">
+							<button class="post-comment btn-primary">POST</button>
+							<button class="cancel-comment btn-secondary-black">
+								CANCEL
+							</button>
+						</div>
+					</form>
+				</div>
 
 				<ul class="comments-container">
 					<li>
 						<p class="comment-author">test.user</p>
 						<p class="comment-content">
 							This is my reply to your well worded blog
+						</p>
+					</li>
+					<li>
+						<p class="comment-author">random02</p>
+						<p class="comment-content">
+							I absolutely disagree with everything you said, and the sould
+							reason for that is that this is palceholder text
+						</p>
+					</li>
+					<li>
+						<p class="comment-author">test.user</p>
+						<p class="comment-content">
+							This is my reply to your well worded blog
+						</p>
+					</li>
+					<li>
+						<p class="comment-author">random02</p>
+						<p class="comment-content">
+							I absolutely disagree with everything you said, and the sould
+							reason for that is that this is palceholder text
 						</p>
 					</li>
 				</ul>

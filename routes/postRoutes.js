@@ -22,7 +22,7 @@ router.route("/new-post").post((req, res) => {
 });
 
 // Like a post
-router.route("/like/:id").post((req, res) => {
+router.route("/like/:id").patch((req, res) => {
 	if (req.session.authenticated) {
 		User.findById(req.session.userID, (err, result) => {
 			if (err) {
@@ -94,9 +94,8 @@ router.route("/post-id/:id").get((req, res) => {
 		.catch(err => res.send(err));
 });
 
-// TODO: Change post to patch
 // Favorite a post
-router.route("/favorite/:id").post((req, res) => {
+router.route("/favorite/:id").patch((req, res) => {
 	if (req.session.authenticated) {
 		User.findById(req.session.userID, (err, result) => {
 			if (err) {
