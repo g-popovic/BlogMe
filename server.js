@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const postsRoutes = require("./routes/postRoutes");
 const userRoutes = require("./routes/userRoutes");
 const session = require("express-session");
+const path = require("path");
 require("dotenv").config();
 
 const app = express();
@@ -42,6 +43,14 @@ app.get("/profile", (req, res) => {
 		res.send("Access denied.");
 	}
 });
+
+if (process.env.NODE_ENV === "production") {
+	app.use(express.static("frontend/build"));
+
+	app.get("*", (req, res) => {
+		res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html"));
+	});
+}
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
