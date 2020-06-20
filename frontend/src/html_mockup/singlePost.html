@@ -8,29 +8,40 @@
 	</head>
 	<body>
 		<div class="root">
-			<nav>
-				<img class="logo" src="../images/Logo@3x.png" alt="logo" />
-				<img
-					class="burger hide-desktop"
-					src="../images/Burger.svg"
-					alt="navigation"
-				/>
-				<ul class="nav-items hide-mobile">
-					<li class="nav-item"><a href="#">Explore</a></li>
-					<li class="nav-item"><a href="#">Favorites</a></li>
-					<li class="nav-item hide-auth"><a href="#">Login</a></li>
-					<li class="nav-item hide-auth"><a href="#">Register</a></li>
-					<li class="nav-item hide-unauth"><a href="#">New Post</a></li>
-				</ul>
+			<div>
+				<nav>
+					<img class="logo" src="../images/Logo@3x.png" alt="logo" />
+					<img
+						class="burger hide-desktop"
+						src="../images/Burger.svg"
+						alt="navigation"
+					/>
+					<ul class="nav-items hide-mobile">
+						<li class="nav-item">
+							<a href="#"><button>Explore</button></a>
+						</li>
+						<li class="nav-item">
+							<a href="#"><button>Favorites</button></a>
+						</li>
+						<li class="nav-item hide-auth">
+							<a href="https://google.com"><button>Login</button></a>
+						</li>
+						<li class="nav-item hide-auth">
+							<a href="https://google.com"><button>Register</button></a>
+						</li>
+						<!-- <li class="nav-item hide-unauth"><a href="#">New Post</a></li> -->
+					</ul>
+				</nav>
 
 				<div class="green-strip"></div>
-			</nav>
+			</div>
 
 			<div class="post-main">
 				<div class="post-sub-main">
 					<h2 class="open-post-title">
 						This is the title of my very first blog
 					</h2>
+					<p class="open-post-date hide-mobile">2 hours ago</p>
 					<p class="open-post-author">djoka123</p>
 
 					<p class="open-post-content">
@@ -45,24 +56,24 @@
 						takimata sanctus est Lorem
 					</p>
 
-					<div class="post-interactions">
-						<button class="likes">
+					<div class="post-interactions open-p-i">
+						<button class="likes open-p-i-item">
 							<img src="../images/like-icon.svg" alt="like icon" />
 							<p class="interaction-label hide-desktop">392</p>
-							<p class="interaction-label hide-mobile">14 Likes</p>
+							<p class="interaction-label hide-mobile">274k Likes</p>
 						</button>
-						<button class="comments">
+						<button class="comments open-p-i-item">
 							<img src="../images/comment-border.svg" alt="comment icon" />
 							<p class="interaction-label hide-desktop">2</p>
-							<p class="interaction-label hide-mobile">14 Likes</p>
+							<p class="interaction-label hide-mobile">1.6k Comments</p>
 						</button>
-						<button class="favorites">
+						<button class="favorites open-p-i-item">
 							<img src="../images/favorite-border.svg" alt="favorite icon" />
 							<p class="interaction-label hide-desktop">2.6k</p>
-							<p class="interaction-label hide-mobile">14 Likes</p>
+							<p class="interaction-label hide-mobile">532 Favorites</p>
 						</button>
 					</div>
-					<p class="post-date">2 hours ago</p>
+					<p class="open-post-date hide-desktop">2 hours ago</p>
 
 					<div class="open-post-seperation">....</div>
 
@@ -74,15 +85,15 @@
 						<label class="comment-label">Add comment:</label>
 						<div class="comment-input-container">
 							<input
-								autocomplete="false"
+								autocomplete="off"
 								type="text"
 								name="comment-input"
 								placeholder="Your comment..."
 							/>
 						</div>
 						<div class="comment-btn-container show-if-typing-comment">
-							<button class="post-comment btn-primary">POST</button>
-							<button class="cancel-comment btn-secondary-black">
+							<button class="post-comment push-effect btn-primary">POST</button>
+							<button class="cancel-comment push-effect btn-secondary-black">
 								CANCEL
 							</button>
 						</div>

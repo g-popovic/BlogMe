@@ -8,23 +8,33 @@
 	</head>
 	<body>
 		<div class="root">
-			<nav>
-				<img class="logo" src="../images/Logo@3x.png" alt="logo" />
-				<img
-					class="burger hide-desktop"
-					src="../images/Burger.svg"
-					alt="navigation"
-				/>
-				<ul class="nav-items hide-mobile">
-					<li class="nav-item"><a href="#">Explore</a></li>
-					<li class="nav-item"><a href="#">Favorites</a></li>
-					<li class="nav-item hide-auth"><a href="#">Login</a></li>
-					<li class="nav-item hide-auth"><a href="#">Register</a></li>
-					<li class="nav-item hide-unauth"><a href="#">New Post</a></li>
-				</ul>
+			<div>
+				<nav>
+					<img class="logo" src="../images/Logo@3x.png" alt="logo" />
+					<img
+						class="burger hide-desktop"
+						src="../images/Burger.svg"
+						alt="navigation"
+					/>
+					<ul class="nav-items hide-mobile">
+						<li class="nav-item">
+							<a href="#"><button>Explore</button></a>
+						</li>
+						<li class="nav-item">
+							<a href="#"><button>Favorites</button></a>
+						</li>
+						<li class="nav-item hide-auth">
+							<a href="https://google.com"><button>Login</button></a>
+						</li>
+						<li class="nav-item hide-auth">
+							<a href="https://google.com"><button>Register</button></a>
+						</li>
+						<!-- <li class="nav-item hide-unauth"><a href="#">New Post</a></li> -->
+					</ul>
+				</nav>
 
 				<div class="green-strip"></div>
-			</nav>
+			</div>
 
 			<div class="create-post-container">
 				<h1>Create New Post</h1>
@@ -48,10 +58,10 @@
 					></textarea>
 
 					<div class="new-post-buttons">
-						<button class="new-post-button btn-primary" type="submit">
+						<button class="new-post-button push-effect btn-primary" type="submit">
 							POST
 						</button>
-						<button class="discard-post-button btn-secondary-black">
+						<button class="discard-post-button push-effect btn-secondary-black">
 							DISCARD
 						</button>
 					</div>

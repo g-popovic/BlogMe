@@ -12,31 +12,38 @@
 	</head>
 	<body>
 		<div class="root">
-			<nav>
-				<img class="logo" src="../images/Logo@3x.png" alt="logo" />
-				<img
-					class="burger hide-desktop"
-					src="../images/Burger.svg"
-					alt="navigation"
-				/>
-				<ul class="nav-items hide-mobile">
-					<li class="nav-item">
-						<a href="#"><button>Explore</button></a>
-					</li>
-					<li class="nav-item">
-						<button>Favorites</button></a>
-					</li>
-					<li class="nav-item hide-auth">
-						<a href="https://google.com"><button>Login</button></a>
-					</li>
-					<li class="nav-item hide-auth">
-						<a href="https://google.com"><button>Register</button></a>
-					</li>
-					<!-- <li class="nav-item hide-unauth"><a href="#">New Post</a></li> -->
-				</ul>
-			</nav>
+			<div>
+				<nav>
+					<img class="logo" src="../images/Logo@3x.png" alt="logo" />
+					<img
+						class="burger hide-desktop"
+						src="../images/Burger.svg"
+						alt="navigation"
+					/>
+					<ul class="nav-items hide-mobile">
+						<li class="nav-item">
+							<a href="#"><button>Explore</button></a>
+						</li>
+						<li class="nav-item">
+							<a href="#"><button>Favorites</button></a>
+						</li>
+						<li class="nav-item hide-auth">
+							<a href="https://google.com"><button>Login</button></a>
+						</li>
+						<li class="nav-item hide-auth">
+							<a href="https://google.com"><button>Register</button></a>
+						</li>
+						<!-- <li class="nav-item hide-unauth"><a href="#">New Post</a></li> -->
+					</ul>
+				</nav>
+			</div>
 
 			<div class="landing-page-main">
+				<div class="landing-page-background">
+					<div class="landing-page-background-tint"></div>
+					<img src="../images/background-nature.jpg" alt="nature" />
+				</div>
+
 				<div class="content">
 					<h1 class="main-header">SHARE YOUR STORIES</h1>
 					<h2 class="header-description">
@@ -45,13 +52,16 @@
 						sed diam voluptua. At vero eos et accusam.
 					</h2>
 
-					<a class="landing-page-button-main" href="#">SIGN UP NOW</a>
-					<a class="landing-page-button-secondary" href="#">EXPLORE</a>
-				</div>
-
-				<div class="landing-page-background">
-					<div class="landing-page-background-tint"></div>
-					<img src="../images/background-nature.jpg" alt="nature" />
+					<a class="landing-btn-container" href="https://google.com"
+						><button class="landing-page-button-main push-effect">
+							SIGN UP NOW
+						</button></a
+					>
+					<a class="landing-btn-container" href="https://google.com"
+						><button class="landing-page-button-secondary push-effect">
+							EXPLORE
+						</button></a
+					>
 				</div>
 			</div>
 		</div>

@@ -8,23 +8,33 @@
 	</head>
 	<body>
 		<div class="root">
-			<nav>
-				<img class="logo" src="../images/Logo@3x.png" alt="logo" />
-				<img
-					class="burger hide-desktop"
-					src="../images/Burger.svg"
-					alt="navigation"
-				/>
-				<ul class="nav-items hide-mobile">
-					<li class="nav-item"><a href="#">Explore</a></li>
-					<li class="nav-item"><a href="#">Favorites</a></li>
-					<li class="nav-item hide-auth"><a href="#">Login</a></li>
-					<li class="nav-item hide-auth"><a href="#">Register</a></li>
-					<li class="nav-item hide-unauth"><a href="#">New Post</a></li>
-				</ul>
+			<div>
+				<nav>
+					<img class="logo" src="../images/Logo@3x.png" alt="logo" />
+					<img
+						class="burger hide-desktop"
+						src="../images/Burger.svg"
+						alt="navigation"
+					/>
+					<ul class="nav-items hide-mobile">
+						<li class="nav-item">
+							<a href="#"><button>Explore</button></a>
+						</li>
+						<li class="nav-item">
+							<a href="#"><button>Favorites</button></a>
+						</li>
+						<li class="nav-item hide-auth">
+							<a href="https://google.com"><button>Login</button></a>
+						</li>
+						<li class="nav-item hide-auth">
+							<a href="https://google.com"><button>Register</button></a>
+						</li>
+						<!-- <li class="nav-item hide-unauth"><a href="#">New Post</a></li> -->
+					</ul>
+				</nav>
 
 				<div class="green-strip"></div>
-			</nav>
+			</div>
 
 			<div class="login-container">
 				<h1>SIGN IN TO BLOGME</h1>
@@ -40,8 +50,8 @@
 							class="login-input"
 							autocomplete="off"
 							type="text"
-                            placeholder="Username"
-                            name="username"
+							placeholder="Username"
+							name="username"
 						/>
 					</div>
 					<div class="login-input-container">
@@ -54,8 +64,8 @@
 							class="login-input"
 							autocomplete="off"
 							type="text"
-                            placeholder="Password"
-                            name="login-icon-password"
+							placeholder="Password"
+							name="login-icon-password"
 						/>
 					</div>
 					<div class="login-input-container">
@@ -72,7 +82,9 @@
 						/>
 					</div>
 
-					<button class="login-button btn-primary" type="submit">SIGN IN</button>
+					<button class="login-button btn-primary push-effect" type="submit">
+						SIGN IN
+					</button>
 
 					<div class="login-second-option">
 						<p>Don't have an account?</p>

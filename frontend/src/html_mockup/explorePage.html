@@ -8,23 +8,33 @@
 	</head>
 	<body>
 		<div class="root">
-			<nav>
-				<img class="logo" src="../images/Logo@3x.png" alt="logo" />
-				<img
-					class="burger hide-desktop"
-					src="../images/Burger.svg"
-					alt="navigation"
-				/>
-				<ul class="nav-items hide-mobile">
-					<li class="nav-item"><a href="#">Explore</a></li>
-					<li class="nav-item"><a href="#">Favorites</a></li>
-					<li class="nav-item hide-auth"><a href="#">Login</a></li>
-					<li class="nav-item hide-auth"><a href="#">Register</a></li>
-					<li class="nav-item hide-unauth"><a href="#">New Post</a></li>
-				</ul>
+			<div>
+				<nav>
+					<img class="logo" src="../images/Logo@3x.png" alt="logo" />
+					<img
+						class="burger hide-desktop"
+						src="../images/Burger.svg"
+						alt="navigation"
+					/>
+					<ul class="nav-items hide-mobile">
+						<li class="nav-item">
+							<a href="#"><button>Explore</button></a>
+						</li>
+						<li class="nav-item">
+							<a href="#"><button>Favorites</button></a>
+						</li>
+						<li class="nav-item hide-auth">
+							<a href="https://google.com"><button>Login</button></a>
+						</li>
+						<li class="nav-item hide-auth">
+							<a href="https://google.com"><button>Register</button></a>
+						</li>
+						<!-- <li class="nav-item hide-unauth"><a href="#">New Post</a></li> -->
+					</ul>
+				</nav>
 
 				<div class="green-strip"></div>
-			</nav>
+			</div>
 
 			<h2 class="posts-page-label">Explore</h2>
 
@@ -37,12 +47,12 @@
 							<button class="likes">
 								<img src="../images/like-border.svg" alt="like icon" />
 								<p class="interaction-label hide-desktop">392</p>
-								<p class="interaction-label hide-mobile">14 Likes</p>
+								<p class="interaction-label hide-mobile">278 Likes</p>
 							</button>
 							<button class="comments">
 								<img src="../images/comment-border.svg" alt="comment icon" />
 								<p class="interaction-label hide-desktop">452</p>
-								<p class="interaction-label hide-mobile">14 Likes</p>
+								<p class="interaction-label hide-mobile">673 Comments</p>
 							</button>
 							<button class="favorites">
 								<img
@@ -50,60 +60,11 @@
 									alt="favorite icon"
 								/>
 								<p class="interaction-label hide-desktop">2.6k</p>
-								<p class="interaction-label hide-mobile">14 Likes</p>
+								<p class="interaction-label hide-mobile">262 Favorites</p>
 							</button>
+							<p class="post-date hide-mobile">14 minutes ago</p>
 						</div>
-						<p class="post-date">14 minutes ago</p>
-					</li>
-					<li class="post">
-						<h3 class="post-title">This is the title of my very first</h3>
-						<p class="post-author">by: djoka123</p>
-						<div class="post-interactions">
-							<button class="likes">
-								<img src="../images/like-icon.svg" alt="like icon" />
-								<p class="interaction-label hide-desktop">392</p>
-								<p class="interaction-label hide-mobile">14 Likes</p>
-							</button>
-							<button class="comments">
-								<img src="../images/comment-border.svg" alt="comment icon" />
-								<p class="interaction-label hide-desktop">452</p>
-								<p class="interaction-label hide-mobile">14 Likes</p>
-							</button>
-							<button class="favorites">
-								<img
-									src="../images/favorite-border.svg"
-									alt="favorite icon"
-								/>
-								<p class="interaction-label hide-desktop">2.6k</p>
-								<p class="interaction-label hide-mobile">14 Likes</p>
-							</button>
-						</div>
-						<p class="post-date">14 minutes ago</p>
-					</li>
-					<li class="post">
-						<h3 class="post-title">This is the title of my very first</h3>
-						<p class="post-author">by: djoka123</p>
-						<div class="post-interactions">
-							<button class="likes">
-								<img src="../images/like-border.svg" alt="like icon" />
-								<p class="interaction-label hide-desktop">0</p>
-								<p class="interaction-label hide-mobile">14 Likes</p>
-							</button>
-							<button class="comments">
-								<img src="../images/comment-border.svg" alt="comment icon" />
-								<p class="interaction-label hide-desktop">1</p>
-								<p class="interaction-label hide-mobile">14 Likes</p>
-							</button>
-							<button class="favorites">
-								<img
-									src="../images/favorite-border.svg"
-									alt="favorite icon"
-								/>
-								<p class="interaction-label hide-desktop">0</p>
-								<p class="interaction-label hide-mobile">14 Likes</p>
-							</button>
-						</div>
-						<p class="post-date">14 minutes ago</p>
+						<p class="post-date hide-desktop">14 minutes ago</p>
 					</li>
 					<li class="post">
 						<h3 class="post-title">This is the title of my very first</h3>
@@ -112,34 +73,12 @@
 							<button class="likes">
 								<img src="../images/like-border.svg" alt="like icon" />
 								<p class="interaction-label hide-desktop">392</p>
-								<p class="interaction-label hide-mobile">14 Likes</p>
-							</button>
-							<button class="comments">
-								<img src="../images/comment-border.svg" alt="comment icon" />
-								<p class="interaction-label hide-desktop">2</p>
-								<p class="interaction-label hide-mobile">14 Likes</p>
-							</button>
-							<button class="favorites">
-								<img src="../images/favorite-icon.svg" alt="favorite icon" />
-								<p class="interaction-label hide-desktop">2.6k</p>
-								<p class="interaction-label hide-mobile">14 Likes</p>
-							</button>
-						</div>
-						<p class="post-date">2 hours ago</p>
-					</li>
-					<li class="post">
-						<h3 class="post-title">This is the title of my very first</h3>
-						<p class="post-author">by: djoka123</p>
-						<div class="post-interactions">
-							<button class="likes">
-								<img src="../images/like-border.svg" alt="like icon" />
-								<p class="interaction-label hide-desktop">12</p>
-								<p class="interaction-label hide-mobile">14 Likes</p>
+								<p class="interaction-label hide-mobile">2.5k Likes</p>
 							</button>
 							<button class="comments">
 								<img src="../images/comment-border.svg" alt="comment icon" />
 								<p class="interaction-label hide-desktop">452</p>
-								<p class="interaction-label hide-mobile">14 Likes</p>
+								<p class="interaction-label hide-mobile">124k Comments</p>
 							</button>
 							<button class="favorites">
 								<img
@@ -147,10 +86,144 @@
 									alt="favorite icon"
 								/>
 								<p class="interaction-label hide-desktop">2.6k</p>
-								<p class="interaction-label hide-mobile">14 Likes</p>
+								<p class="interaction-label hide-mobile">561k Favorites</p>
 							</button>
+							<p class="post-date hide-mobile">14 minutes ago</p>
 						</div>
-						<p class="post-date">14 minutes ago</p>
+						<p class="post-date hide-desktop">14 minutes ago</p>
+					</li>
+					<li class="post">
+						<h3 class="post-title">This is the title of my very first</h3>
+						<p class="post-author">by: djoka123</p>
+						<div class="post-interactions">
+							<button class="likes">
+								<img src="../images/like-border.svg" alt="like icon" />
+								<p class="interaction-label hide-desktop">392</p>
+								<p class="interaction-label hide-mobile">1.1m Likes</p>
+							</button>
+							<button class="comments">
+								<img src="../images/comment-border.svg" alt="comment icon" />
+								<p class="interaction-label hide-desktop">452</p>
+								<p class="interaction-label hide-mobile">214m Comments</p>
+							</button>
+							<button class="favorites">
+								<img
+									src="../images/favorite-border.svg"
+									alt="favorite icon"
+								/>
+								<p class="interaction-label hide-desktop">2.6k</p>
+								<p class="interaction-label hide-mobile">1 Favorites</p>
+							</button>
+							<p class="post-date hide-mobile">14 minutes ago</p>
+						</div>
+						<p class="post-date hide-desktop">14 minutes ago</p>
+					</li>
+					<li class="post">
+						<h3 class="post-title">This is the title of my very first</h3>
+						<p class="post-author">by: djoka123</p>
+						<div class="post-interactions">
+							<button class="likes">
+								<img src="../images/like-border.svg" alt="like icon" />
+								<p class="interaction-label hide-desktop">392</p>
+								<p class="interaction-label hide-mobile">278 Likes</p>
+							</button>
+							<button class="comments">
+								<img src="../images/comment-border.svg" alt="comment icon" />
+								<p class="interaction-label hide-desktop">452</p>
+								<p class="interaction-label hide-mobile">673 Comments</p>
+							</button>
+							<button class="favorites">
+								<img
+									src="../images/favorite-border.svg"
+									alt="favorite icon"
+								/>
+								<p class="interaction-label hide-desktop">2.6k</p>
+								<p class="interaction-label hide-mobile">0 Favorites</p>
+							</button>
+							<p class="post-date hide-mobile">14 minutes ago</p>
+						</div>
+						<p class="post-date hide-desktop">14 minutes ago</p>
+					</li>
+					<li class="post">
+						<h3 class="post-title">
+							This is the title of my very first blog post, I hope it gets many
+							likes comments and favorites, and maybe even a idk
+						</h3>
+						<p class="post-author">by: djoka123</p>
+						<div class="post-interactions">
+							<button class="likes">
+								<img src="../images/like-border.svg" alt="like icon" />
+								<p class="interaction-label hide-desktop">392</p>
+								<p class="interaction-label hide-mobile">278 Likes</p>
+							</button>
+							<button class="comments">
+								<img src="../images/comment-border.svg" alt="comment icon" />
+								<p class="interaction-label hide-desktop">452</p>
+								<p class="interaction-label hide-mobile">673 Comments</p>
+							</button>
+							<button class="favorites">
+								<img
+									src="../images/favorite-border.svg"
+									alt="favorite icon"
+								/>
+								<p class="interaction-label hide-desktop">2.6k</p>
+								<p class="interaction-label hide-mobile">0 Favorites</p>
+							</button>
+							<p class="post-date hide-mobile">14 minutes ago</p>
+						</div>
+						<p class="post-date hide-desktop">14 minutes ago</p>
+					</li>
+					<li class="post">
+						<h3 class="post-title">This is the title of my very first</h3>
+						<p class="post-author">by: djoka123</p>
+						<div class="post-interactions">
+							<button class="likes">
+								<img src="../images/like-border.svg" alt="like icon" />
+								<p class="interaction-label hide-desktop">392</p>
+								<p class="interaction-label hide-mobile">278 Likes</p>
+							</button>
+							<button class="comments">
+								<img src="../images/comment-border.svg" alt="comment icon" />
+								<p class="interaction-label hide-desktop">452</p>
+								<p class="interaction-label hide-mobile">673 Comments</p>
+							</button>
+							<button class="favorites">
+								<img
+									src="../images/favorite-border.svg"
+									alt="favorite icon"
+								/>
+								<p class="interaction-label hide-desktop">2.6k</p>
+								<p class="interaction-label hide-mobile">0 Favorites</p>
+							</button>
+							<p class="post-date hide-mobile">14 minutes ago</p>
+						</div>
+						<p class="post-date hide-desktop">14 minutes ago</p>
+					</li>
+					<li class="post">
+						<h3 class="post-title">This is the title of my very first</h3>
+						<p class="post-author">by: djoka123</p>
+						<div class="post-interactions">
+							<button class="likes">
+								<img src="../images/like-border.svg" alt="like icon" />
+								<p class="interaction-label hide-desktop">392</p>
+								<p class="interaction-label hide-mobile">278 Likes</p>
+							</button>
+							<button class="comments">
+								<img src="../images/comment-border.svg" alt="comment icon" />
+								<p class="interaction-label hide-desktop">452</p>
+								<p class="interaction-label hide-mobile">673 Comments</p>
+							</button>
+							<button class="favorites">
+								<img
+									src="../images/favorite-border.svg"
+									alt="favorite icon"
+								/>
+								<p class="interaction-label hide-desktop">2.6k</p>
+								<p class="interaction-label hide-mobile">0 Favorites</p>
+							</button>
+							<p class="post-date hide-mobile">14 minutes ago</p>
+						</div>
+						<p class="post-date hide-desktop">14 minutes ago</p>
 					</li>
 				</ul>
 			</div>

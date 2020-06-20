@@ -65,6 +65,16 @@ button:focus {
 	border: solid 2px #2a2a2a;
 }
 
+.landing-page-button-main:active,
+.btn-primary:active {
+	background-color: #056d53;
+}
+
+.push-effect:active {
+	position: relative;
+	top: 2px;
+}
+
 /*############################# NAV BAR #############################*/
 
 nav {
@@ -77,6 +87,11 @@ nav {
 .logo {
 	width: 6.5em;
 	margin: auto;
+	cursor: pointer;
+}
+
+.logo-anchor:focus {
+	outline: none;
 }
 
 .burger {
@@ -89,7 +104,8 @@ nav {
 .green-strip {
 	width: 100%;
 	height: 0.6rem;
-	margin: 1rem 0 -1rem;
+	margin: -0.2rem 0 0;
+	padding: 0;
 	background-image: linear-gradient(-90deg, #1fab89, #76ddb2 40%, #9df3c4);
 }
 
@@ -100,6 +116,7 @@ nav {
 	top: 0;
 	height: 100%;
 	width: 100%;
+	z-index: -1;
 }
 
 .landing-page-background-tint {
@@ -146,14 +163,19 @@ nav {
 .landing-page-button-secondary {
 	color: white;
 	text-decoration: none;
+	background: none;
 	font-size: 1.2em;
 	font-weight: lighter;
 	display: block;
 	padding: 0.9rem;
 	border-radius: 2rem;
 	border: solid 2px white;
-	width: 52%;
+	width: 58%;
 	margin: 1.5rem auto;
+}
+
+.landing-btn-container {
+	text-decoration: none;
 }
 
 .landing-page-button-main {
@@ -180,7 +202,7 @@ nav {
 
 .posts-main {
 	background-color: white;
-	height: 100%;
+	height: 10%;
 	padding: 1.5rem 0;
 	position: absolute;
 	text-align: left;
@@ -198,6 +220,7 @@ nav {
 
 .posts-container li:last-child {
 	margin-bottom: 0;
+	padding-bottom: 2rem;
 	border-bottom: 1px solid white;
 }
 
@@ -231,7 +254,6 @@ nav {
 
 .post-interactions button:focus {
 	outline: none;
-	cursor: pointer;
 }
 
 .interaction-label {
@@ -265,7 +287,7 @@ nav {
 .post-main {
 	background-color: white;
 	margin-top: 4rem;
-	padding-bottom: 3.5rem;
+	padding-bottom: 2.3rem;
 	text-align: left;
 }
 
@@ -278,6 +300,13 @@ nav {
 }
 
 .open-post-title {
+	font-weight: 600;
+}
+
+.open-post-date {
+	font-size: 0.8em;
+	color: #8a8a8a;
+	margin: 0.2rem 0 2rem;
 	font-weight: 600;
 }
 
@@ -295,7 +324,7 @@ nav {
 
 .open-post-seperation {
 	text-align: center;
-	margin: -2.2rem auto 1.7rem;
+	margin: -1.7rem auto 2.3rem;
 	font-size: 2.8rem;
 	color: #acacac;
 	letter-spacing: 0.4rem;
@@ -307,13 +336,13 @@ nav {
 }
 
 .post-comment-form input {
-	border: none;
-	background-color: white;
-	font-size: 1.2em;
-	margin: 1rem 0 1.4rem;
-	padding: 0.6rem 1.4rem;
-	font-weight: 500;
-	border: 1px solid #d8d8d8;
+	margin: 0.8rem 0 1.7rem;
+	font-size: 1.22em;
+	padding: 0.8rem 1.3rem;
+	border: 1px #c7c7c7 solid;
+	border-radius: 0.4rem;
+	resize: none;
+
 	flex-basis: 100%;
 }
 
@@ -326,14 +355,10 @@ nav {
 	font-weight: 500;
 }
 
-.post-comment-form input:focus {
-	outline: 1px #1fab89 solid;
-}
-
 .comment-btn-container {
 	display: flex;
 	justify-content: space-between;
-	margin: 0 auto 1.8rem;
+	margin: 0 auto 2.4rem;
 }
 
 .post-comment,
@@ -362,6 +387,10 @@ nav {
 
 .comments-container li:last-child {
 	border-bottom: none;
+}
+
+.comments-container li:first-child {
+	border-top: 1px solid #d6d6d6;
 }
 
 .comment-author {
@@ -536,11 +565,21 @@ nav {
 
 @media only screen and (min-width: 600px) {
 	.hide-desktop {
-		display: none;
+		display: none !important;
 	}
 
 	.hide-mobile {
 		display: block;
+	}
+
+	.landing-page-button-main:hover,
+	.btn-primary:hover {
+		background-color: #159676;
+	}
+
+	.landing-page-button-main:active,
+	.btn-primary:active {
+		background-color: #056d53;
 	}
 
 	/*############################# NAVBAR #############################*/
@@ -575,8 +614,10 @@ nav {
 		text-decoration: none;
 		cursor: pointer;
 		color: #2a2a2a;
-		padding: 1.5rem 1.4rem;
+		padding: 1.2rem 1.7rem;
 		font-size: 1.1em;
+		font-weight: 500;
+		font-family: "Montserrat", sans-serif;
 	}
 
 	.nav-item button:focus {
@@ -584,29 +625,259 @@ nav {
 	}
 
 	.nav-item button:hover {
-		background-color: #f3f3f3;
+		background-color: #e6e6e6;
 	}
 
 	.nav-item button:active {
-		background-color: #ebebeb;
+		background-color: #d3d3d3;
 	}
 
-	/* .nav-items li:last-child {
-		margin: auto 1.4rem;
+	.green-strip {
+		margin: 0;
 	}
 
-	.nav-items li:last-child button {
-		border: 1px solid #2a2a2a;
-		border-radius: 3rem;
-		padding: 0.3rem 1rem;
+	/*############################# LANDING PAGE #############################*/
+
+	.main-header {
+		font-size: 3em;
+		margin: 7.6rem auto 2.6rem;
+	}
+
+	.header-description {
+		width: 78%;
+		margin: 2.6rem auto 3.7rem;
+		font-size: 1.6em;
+	}
+
+	.landing-page-button-main,
+	.landing-page-button-secondary {
+		display: inline-block;
+		width: 15rem;
+		padding: 1rem;
+		margin: 0 1rem 2rem;
+		cursor: pointer;
+		letter-spacing: 1px;
+	}
+
+	/*############################# EXPLORE PAGE #############################*/
+
+	.posts-page-label {
+		font-size: 2.4em;
+		font-weight: 600;
+		color: #2a2a2a;
+		text-align: left;
+		letter-spacing: 1px;
+		width: 70%;
+		margin: 3rem auto;
+	}
+
+	.posts-main {
+		width: 70%;
+		margin: 0 auto;
+		padding-top: 1rem;
+		box-shadow: 0px 0 30px 0px rgba(0, 0, 0, 0.08);
+	}
+
+	.posts-container {
+		margin-bottom: 4rem;
+	}
+
+	.post {
+		padding: 1rem 3rem;
+		margin-bottom: 1rem;
+	}
+
+	.post-author,
+	.post-title {
 		cursor: pointer;
 	}
 
-	.nav-items li:last-child button:hover {
-		box-shadow: 0 0 2rem 0.3rem rgba(0, 0, 0, 0.08);
+	.post-author {
+		margin-bottom: 0.25rem;
 	}
 
-	.nav-items li:last-child button:active {
-		background-color: #ebebeb;
-	} */
+	.post-title {
+		width: 85%;
+		line-height: 1.3;
+	}
+
+	.post-interactions {
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.post-date {
+		margin: 0;
+		text-align: right;
+		flex-basis: 34%;
+	}
+
+	.post-interactions button {
+		cursor: pointer;
+	}
+
+	/* Determening space for each interaction */
+	.likes {
+		flex-basis: 16% !important;
+	}
+
+	.comments {
+		flex-basis: 21% !important;
+	}
+
+	.favorites {
+		flex-basis: 19% !important;
+	}
+
+	.interaction-label {
+		font-size: 1.1em;
+	}
+
+	.posts-container li:last-child {
+		padding-bottom: 2rem;
+	}
+
+	/*############################# EXPLORE PAGE #############################*/
+
+	.post-main {
+		width: 70%;
+		margin: 3rem auto 4rem;
+		padding: 0 0 1rem;
+		box-shadow: 0px 0 30px 0px rgba(0, 0, 0, 0.08);
+	}
+
+	.post-sub-main {
+		padding: 3rem 4rem 0;
+	}
+
+	.open-post-title {
+		font-weight: 500;
+		font-size: 1.75em;
+		color: #2a2a2a;
+		width: 80%;
+		display: inline-block;
+	}
+
+	.open-post-date {
+		display: inline-block;
+		width: 19%;
+		text-align: right;
+		margin: 0;
+		font-size: 0.9em;
+	}
+
+	.open-post-author {
+		margin: 0.5rem 0 2.4rem;
+		font-size: 0.95em;
+	}
+
+	.open-post-content {
+		line-height: 1.45;
+		font-size: 1.2em;
+	}
+
+	.open-p-i {
+		justify-content: start;
+	}
+
+	.open-p-i-item:nth-child(1) {
+		flex-basis: 20% !important;
+	}
+
+	.open-p-i-item:nth-child(2) {
+		flex-basis: 25% !important;
+	}
+
+	.open-p-i-item:nth-child(3) {
+		flex-basis: 20% !important;
+	}
+
+	.open-post-seperation {
+		margin: 0rem auto 2.4rem;
+		font-size: 3.2em;
+		letter-spacing: 0.2em;
+	}
+
+	/* Comments */
+
+	.comment-input-container input {
+		padding: 0.75rem 1.4rem;
+		border-radius: 0.3rem;
+	}
+
+	.comment-btn-container {
+		justify-content: flex-end;
+		margin-bottom: 3rem;
+	}
+
+	.post-comment,
+	.cancel-comment {
+		width: 8rem;
+	}
+
+	.post-comment {
+		margin-right: 1.4rem;
+	}
+
+	.comments-container li {
+		padding: 1rem 4rem;
+	}
+
+	.comment-author {
+		margin-top: 0.8rem;
+		font-weight: 700;
+	}
+
+	/*############################# LOGIN PAGE #############################*/
+
+	.login-container {
+		width: 70%;
+		box-shadow: 0px 0 30px 0px rgba(0, 0, 0, 0.08);
+		margin: 0 auto;
+	}
+
+	.login-container h1 {
+		font-size: 2.6em;
+		margin: 8rem auto 0;
+	}
+
+	.login-forms {
+		margin: 2.7rem auto;
+		width: 30%;
+	}
+
+	.login-button {
+		margin: 4.5rem auto 2rem;
+	}
+
+	/*############################# LOGIN PAGE #############################*/
+
+	.create-post-container {
+		width: 70%;
+		margin: 0 auto;
+		box-shadow: 0px 0 30px 0px rgba(0, 0, 0, 0.08);
+	}
+
+	.create-post-container h1 {
+		margin: 7.2rem auto 2rem;
+	}
+
+	.create-post-container form {
+		padding: 0 5rem;
+	}
+
+	.new-post-content {
+		min-height: 7rem;
+	}
+
+	.new-post-buttons {
+		text-align: center;
+		margin-top: 1.1rem;
+	}
+
+	.new-post-buttons button {
+		width: 11rem;
+		display: inline-block;
+		margin: 0 1rem 2rem;
+	}
 }
