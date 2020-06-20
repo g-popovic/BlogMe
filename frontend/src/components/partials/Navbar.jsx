@@ -5,6 +5,8 @@ function Navbar(props) {
 		.toString()
 		.replace(window.location.pathname.toString(), "");
 
+	console.log(adress);
+
 	return (
 		<div>
 			<nav>
@@ -22,24 +24,24 @@ function Navbar(props) {
 				/>
 				<ul className="nav-items hide-mobile">
 					<li className="nav-item">
-						<a href={adress + "/explore"}>
+						<a href="/explore">
 							<button>Explore</button>
 						</a>
 					</li>
 					<li className="nav-item">
-						<a href={adress + "/favorites"}>
+						<a href="/favorites">
 							<button>Favorites</button>
 						</a>
 					</li>
 					{props.authenticated ? (
 						<li className="nav-item">
-							<a href={adress + "/new-post"}>
+							<a href="/new-post">
 								<button>New Post</button>
 							</a>
 						</li>
 					) : (
 						<li className="nav-item">
-							<a href={adress + "/login"}>
+							<a href="/login">
 								<button>Login</button>
 							</a>
 						</li>
@@ -47,7 +49,7 @@ function Navbar(props) {
 
 					{props.authenticated ? null : (
 						<li className="nav-item">
-							<a href={adress + "/register"}>
+							<a href="/register">
 								<button>Register</button>
 							</a>
 						</li>

@@ -54,7 +54,7 @@ function RegisterForms() {
 
 				<div className="login-second-option">
 					<p>Already have an account?</p>
-					<a href="#">Sign in now!</a>
+					<a href="/login">Sign in now!</a>
 				</div>
 			</form>
 		</div>

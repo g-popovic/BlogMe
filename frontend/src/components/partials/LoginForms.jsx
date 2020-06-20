@@ -41,7 +41,7 @@ function LoginForms() {
 
 				<div className="login-second-option">
 					<p>Don't have an account?</p>
-					<a href="#">Create one now!</a>
+					<a href="/register">Create one now!</a>
 				</div>
 			</form>
 		</div>

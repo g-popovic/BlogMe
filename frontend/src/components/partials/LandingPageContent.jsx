@@ -16,12 +16,12 @@ function LandingPageContent() {
 					voluptua. At vero eos et accusam.
 				</h2>
 
-				<a className="landing-btn-container" href="https://google.com">
+				<a className="landing-btn-container" href="/register">
 					<button className="landing-page-button-main push-effect">
 						SIGN UP NOW
 					</button>
 				</a>
-				<a className="landing-btn-container" href="https://google.com">
+				<a className="landing-btn-container" href="/explore">
 					<button className="landing-page-button-secondary push-effect">
 						EXPLORE
 					</button>
