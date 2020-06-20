@@ -1,10 +1,14 @@
 import React from "react";
 
 function Navbar(props) {
+	const adress = window.location.href
+		.toString()
+		.replace(window.location.pathname.toString(), "");
+
 	return (
 		<div>
 			<nav>
-				<a className="logo-anchor" href="http://localhost:3000">
+				<a className="logo-anchor" href={adress}>
 					<img
 						className="logo"
 						src={require("../../images/Logo@3x.png")}
@@ -18,24 +22,24 @@ function Navbar(props) {
 				/>
 				<ul className="nav-items hide-mobile">
 					<li className="nav-item">
-						<a href="http://localhost:3000/explore">
+						<a href={adress + "/explore"}>
 							<button>Explore</button>
 						</a>
 					</li>
 					<li className="nav-item">
-						<a href="http://localhost:3000/favorites">
+						<a href={adress + "/favorites"}>
 							<button>Favorites</button>
 						</a>
 					</li>
 					{props.authenticated ? (
 						<li className="nav-item">
-							<a href="http://localhost:3000/new-post">
+							<a href={adress + "/new-post"}>
 								<button>New Post</button>
 							</a>
 						</li>
 					) : (
 						<li className="nav-item">
-							<a href="http://localhost:3000/login">
+							<a href={adress + "/login"}>
 								<button>Login</button>
 							</a>
 						</li>
@@ -43,7 +47,7 @@ function Navbar(props) {
 
 					{props.authenticated ? null : (
 						<li className="nav-item">
-							<a href="http://localhost:3000/register">
+							<a href={adress + "/register"}>
 								<button>Register</button>
 							</a>
 						</li>
