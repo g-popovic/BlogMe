@@ -17,7 +17,7 @@ router.route("/new-post").post((req, res) => {
 			.then(() => res.send("Post added successfully."))
 			.catch(err => res.send(err));
 	} else {
-		res.send("You need to login first.");
+		res.status(401).send("You need to login first.");
 	}
 });
 
@@ -29,10 +29,10 @@ router.route("/like/:id").patch((req, res) => {
 				res.send(err);
 			} else {
 				if (result.likedPostsIDs.includes(req.params.id)) {
-					Post.findByIdAndUpdate(req.params.id, { $inc: { likes: 1 } })
+					Post.findByIdAndUpdate(req.params.id, { $inc: { likes: -1 } })
 						.then(() => {
 							result
-								.update({
+								.updateOne({
 									$pull: { likedPostsIDs: req.params.id }
 								})
 								.then(() => res.send("Liked post."))
@@ -42,10 +42,10 @@ router.route("/like/:id").patch((req, res) => {
 						})
 						.catch(err => res.send(err));
 				} else {
-					Post.findByIdAndUpdate(req.params.id, { $inc: { likes: -1 } })
+					Post.findByIdAndUpdate(req.params.id, { $inc: { likes: 1 } })
 						.then(() => {
 							result
-								.update({
+								.updateOne({
 									$push: { likedPostsIDs: req.params.id }
 								})
 								.then(() => res.send("Unliked post."))
@@ -58,7 +58,7 @@ router.route("/like/:id").patch((req, res) => {
 			}
 		});
 	} else {
-		res.send("You need to login first.");
+		res.status(401).send("You need to login first.");
 	}
 });
 
@@ -76,21 +76,58 @@ router.route("/new-comment/:postId").post((req, res) => {
 			.then(() => res.send("Added comment."))
 			.catch(err => res.send(err));
 	} else {
-		res.send("You need to login first.");
+		res.status(401).send("You need to login first.");
 	}
 });
 
 // Get all posts
 router.route("/all").get((req, res) => {
 	Post.find()
-		.then(posts => res.send(posts))
+		.then(posts => {
+			posts.forEach(post => {
+				post.postTime = calculateTimeDifference(post.date);
+			});
+			if (req.session.authenticated) {
+				User.findById(req.session.userID)
+					.then(user => {
+						posts.forEach(post => {
+							if (user.likedPostsIDs.includes(post._id)) {
+								post.liked = true;
+							}
+							if (user.favoritePostsIDs.includes(post._id)) {
+								post.favorited = true;
+							}
+						});
+						res.send(posts);
+					})
+					.catch(err => {
+						res.send(err);
+					});
+			} else {
+				res.send(posts);
+			}
+		})
 		.catch(err => res.send(err));
 });
 
 // Get a specific post by it's ID
 router.route("/post-id/:id").get((req, res) => {
 	Post.findById(req.params.id)
-		.then(post => res.send(post))
+		.then(post => {
+			post.postTime = calculateTimeDifference(post.date);
+
+			if (req.session.authenticated) {
+				User.findById(req.session.userID)
+					.then(user => {
+						post.liked = user.likedPostsIDs.includes(post._id);
+						post.favorited = user.favoritePostsIDs.includes(post._id);
+						res.send(post);
+					})
+					.catch(err => res.send(err));
+			} else {
+				res.send(post);
+			}
+		})
 		.catch(err => res.send(err));
 });
 
@@ -105,7 +142,7 @@ router.route("/favorite/:id").patch((req, res) => {
 					Post.findByIdAndUpdate(req.params.id, { $inc: { favorites: -1 } })
 						.then(() => {
 							result
-								.update({
+								.updateOne({
 									$pull: { favoritePostsIDs: req.params.id }
 								})
 								.then(() => res.send("Post removed from favorites."))
@@ -118,7 +155,7 @@ router.route("/favorite/:id").patch((req, res) => {
 					Post.findByIdAndUpdate(req.params.id, { $inc: { favorites: 1 } })
 						.then(() => {
 							result
-								.update({
+								.updateOne({
 									$push: { favoritePostsIDs: req.params.id }
 								})
 								.then(() => res.send("Post added to favorites."))
@@ -131,7 +168,7 @@ router.route("/favorite/:id").patch((req, res) => {
 			}
 		});
 	} else {
-		res.send("You need to login first.");
+		res.status(401).send("You need to login first.");
 	}
 });
 
@@ -142,12 +179,43 @@ router.route("/favorites").get((req, res) => {
 			const ids = user.favoritePostsIDs;
 
 			Post.find({ _id: { $in: ids } })
-				.then(posts => res.send(posts))
+				.then(posts => {
+					posts.forEach(post => {
+						post.favorited = true;
+						post.liked = user.likedPostsIDs.includes(post._id);
+						post.postTime = calculateTimeDifference(post.date);
+					});
+
+					res.send(posts);
+				})
 				.catch(err => res.send(err));
 		});
 	} else {
-		res.send("You need to login first.");
+		res.status(401).send("You need to login first.");
 	}
 });
+
+function calculateTimeDifference(date) {
+	let timeDifference = (new Date() - date) / 1000;
+	if (timeDifference > 60 * 60 * 24 * 30) {
+		let diff = Math.floor(timeDifference / (60 * 60 * 24 * 30));
+		return diff + (diff === 1 ? " month ago" : " months ago");
+	} else if (timeDifference > 60 * 60 * 24 * 7) {
+		let diff = Math.floor(timeDifference / (60 * 60 * 24 * 7));
+		return diff + (diff === 1 ? " week ago" : " weeks ago");
+	} else if (timeDifference > 60 * 60 * 24) {
+		let diff = Math.floor(timeDifference / (60 * 60 * 24));
+		return diff + (diff === 1 ? " day ago" : " days ago");
+	} else if (timeDifference > 60 * 60) {
+		let diff = Math.floor(timeDifference / (60 * 60));
+		return diff + (diff === 1 ? " hour ago" : " hours ago");
+	} else if (timeDifference > 60) {
+		let diff = Math.floor(timeDifference / 60);
+		return diff + (diff === 1 ? " minute ago" : " minutes ago");
+	} else {
+		let diff = Math.floor(timeDifference);
+		return diff + (diff === 1 ? " second ago" : " seconds ago");
+	}
+}
 
 module.exports = router;

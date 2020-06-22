@@ -46,6 +46,10 @@ router.route("/login").post((req, res) => {
 	});
 });
 
+router.route("/user-id").get((req, res) => {
+	res.send(req.session.userID);
+});
+
 router.route("/logout").post((req, res) => {
 	req.session.authenticated = false;
 	req.session.userID = undefined;

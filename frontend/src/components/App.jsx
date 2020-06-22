@@ -17,7 +17,7 @@ function App() {
 			<Route path="/login" component={LoginPage} />
 			<Route path="/register" component={RegisterPage} />
 			<Route path="/new-post" component={CreatePostPage} />
-			<Route path="/post" component={OpenedPostPage} />
+			<Route path="/post/:id" component={OpenedPostPage} />
 		</Router>
 	);
 }

@@ -5,7 +5,7 @@ import LandingPageContent from "../partials/LandingPageContent";
 function LandingPage() {
 	return (
 		<div>
-			<Navbar authenticated={true} />
+			<Navbar />
 			<LandingPageContent />
 		</div>
 	);

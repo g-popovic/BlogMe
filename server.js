@@ -5,11 +5,21 @@ const postsRoutes = require("./routes/postRoutes");
 const userRoutes = require("./routes/userRoutes");
 const session = require("express-session");
 const path = require("path");
+const cors = require("cors");
 require("dotenv").config();
 
 const app = express();
 
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(
+	cors({
+		credentials: true,
+		origin:
+			process.env.NODE_ENV === "production"
+				? "https://blogme02.herokuapp.com"
+				: "http://localhost:3000"
+	})
+);
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(
 	session({

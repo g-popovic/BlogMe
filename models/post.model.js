@@ -10,6 +10,7 @@ const postSchema = new mongoose.Schema({
 	title: String,
 	content: String,
 	date: Date,
+	postTime: String,
 	likes: {
 		type: Number,
 		default: 0
@@ -21,6 +22,14 @@ const postSchema = new mongoose.Schema({
 	comments: {
 		type: [commentSchema],
 		default: []
+	},
+	liked: {
+		type: Boolean,
+		default: false
+	},
+	favorited: {
+		type: Boolean,
+		default: false
 	}
 });
 
